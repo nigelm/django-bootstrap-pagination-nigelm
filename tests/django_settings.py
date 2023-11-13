@@ -13,7 +13,7 @@ MIDDLEWARE_CLASSES = ()
 ROOT_URLCONF = "tests.django_settings.urls"
 SECRET_KEY = "secretkey"
 SITE_ROOT = "."
-
+USE_TZ = True
 
 TEMPLATE_DEBUG = True
 TEMPLATE_DIRS = ()
