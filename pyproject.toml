@@ -5,6 +5,9 @@ description = "Render Django Page objects as Bootstrap 3.x/4.x Pagination compat
 authors = ["Jason McClellan <jason@jasonmcclellan.io>", "Koert van der Veer <koert@ondergetekende.nl>", "Nigel Metheringham <nigel.metheringham@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+packages = [
+    { include = "bootstrap_pagination" },
+]
 classifiers = [
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -33,13 +36,20 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.10"
 django = ">=1.2,<4.0"
+unittest2pytest = "^0.4"
 
 [tool.poetry.group.dev.dependencies]
 mock = "^5.1.0"
 lxml = "^4.9.3"
 cssselect = "^1.2.0"
 coverage = "^7.3.2"
+pytest-django = "^4.7.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.django_settings"
+python_files = ["test_*.py"]
+django_find_project = false
