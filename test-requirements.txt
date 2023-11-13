@@ -1,5 +1,0 @@
-mock
-lxml
-cssselect
-coverage
-unittest2
