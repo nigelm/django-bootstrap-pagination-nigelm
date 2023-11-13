@@ -35,8 +35,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-django = ">=1.2,<4.0"
-unittest2pytest = "^0.4"
+django = ">=1.2"
 
 [tool.poetry.group.dev.dependencies]
 mock = "^5.1.0"
